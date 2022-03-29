@@ -10,3 +10,9 @@ if (! function_exists('money')) {
         return number_format($numeric, 2, ',', '.');
     }
 }
+if (!function_exists('time_counter')){
+    function time_counter() {
+        list($usec, $sec) = explode(" ", microtime());
+        return ((float) $usec + (float)$sec);
+    }
+}
